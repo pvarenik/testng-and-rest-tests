@@ -1,0 +1,4 @@
+test:
+  stage: test
+  script:
+    - mvn '-Dtest=org.example.*Test' test
