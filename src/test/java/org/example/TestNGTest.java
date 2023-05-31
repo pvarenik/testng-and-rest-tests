@@ -28,7 +28,7 @@ public class TestNGTest {
     }
 
     @AfterTest
-    public void teardown() throws SocketException {
+    public void teardown() {
         driver.quit();
     }
 }
