@@ -18,6 +18,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1200");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.get("https://www.google.co.il/");
     }
