@@ -16,7 +16,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+        options.addArguments("--headless");
         options.addArguments("--window-size=1920,1200");
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
