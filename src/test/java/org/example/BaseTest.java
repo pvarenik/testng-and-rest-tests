@@ -16,8 +16,8 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        options.addArguments("window-size=1920,1200");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1200");
         driver = new ChromeDriver(options);
         driver.get("https://www.google.co.il/");
     }
