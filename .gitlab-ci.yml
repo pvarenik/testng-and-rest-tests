@@ -1,9 +1,14 @@
-stages:
-  - build
+image: maven:latest
 
-java-build:
-  # select the most appropriate image for your project
-  image: maven:3.8-openjdk-11
-  stage: build
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+build:
+  stage: test
   script:
-    - 'mvn "-Dtest=org.example.*Test" test'
+    - mvn '-Dtest=org.example.*Test' test
